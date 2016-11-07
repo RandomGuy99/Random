@@ -1,0 +1,42 @@
+Initial Request :
+{
+	"@dev": "1",
+	"new_snaketest": {
+		"BERTS": [{
+			"interface_type": "100GigabitEthernet",
+			"logical_interface_z": "33/N/A/Mask.0",
+			"@BERTID": "E-RALN-549293",
+			"router_z": "ATCLNJ-LCR-22 ",
+			"CLO": "12121",
+			"router_a": "ATCLNJ-LCR-21",
+			"physical_interface_a": "11/N/A/Mask",
+			"logical_interface_a": "11/N/A/Mask.0",
+			"physical_interface_z": "33/N/A/Mask",
+			"CID": "10912/121212/ALBYNYSS   /ALBYNYSS"
+		}],
+		"userid": "wfm",
+		"worktype": "Circuit Bundle",
+		"@wfm_id": "705844"
+	}
+}
+
+Response :
+"<?xml version="
+1.0 " encoding="UTF - 8 " standalone="no" ?> <data> <new_snaketest wfm_id = "705844" > < testid > 4039 < /testid></new_snaketest > < /data>
+"
+
+PostMessageList : REQUEST_MSG
+<snak: PostMessageList xmlns: snak = "http://www.verizon.com/wfm/SnakeTest"
+xmlns: soapenv = "http://schemas.xmlsoap.org/soap/envelope/" > < snak: SNAKE_TEST_ID > 4039 < /snak:SNAKE_TEST_ID><snak:BERT_ID/ > < snak: USER_Id > wrangler < /snak:USER_Id><snak:DATESTAMP>2016-07-19T06:30:01</snak: DATESTAMP > < snak: SEVERITY > Started < /snak:SEVERITY><snak:MESSAGE>Started</snak: MESSAGE > < /snak:PostMessageList>
+
+REQUEST_MSG
+<snak:POSTRESPONSESTATUS xmlns:snak="http://www.verizon.com/wfm/SnakeTest"><snak:STATUS_TYPE>Success</snak:STATUS_TYPE><snak:STATUS_MESSAGE>Success</snak:STATUS_MESSAGE></snak:POSTRESPONSESTATUS>
+
+
+UpdatePostBertList :REQUEST_MSG
+<snak: UpdatePostBertList xmlns: soapenv = "http://schemas.xmlsoap.org/soap/envelope/"
+xmlns: snak = "http://www.verizon.com/wfm/SnakeTest" > < snak: SNAKE_TEST_ID > 4039 < /snak:SNAKE_TEST_ID><snak:BERT_ID>E-RALN-549293</snak: BERT_ID > < snak: RESULT_TIME > 2016 - 07 - 20 T04: 00: 02 < /snak:RESULT_TIME><snak:ROUTER_NAME>BLTMMD-VFTTP-309</snak: ROUTER_NAME > < snak: STATE > Up < /snak:STATE><snak:CLEARED>1:00:00</snak: CLEARED > < snak: INPUT_RATE > 0 < /snak:INPUT_RATE><snak:OUTPUT_RATE>0</snak: OUTPUT_RATE > < snak: INPUT_ERROR > 0 < /snak:INPUT_ERROR><snak:OUTPUT_ERROR>0</snak: OUTPUT_ERROR > < snak: OUTPUT_CARRIER > 0 < /snak:OUTPUT_CARRIER><snak:OUTPUT_COLLISION>0</snak: OUTPUT_COLLISION > < snak: INPUT_FRAME > 0 < /snak:INPUT_FRAME><snak:INPUT_CRC>0</snak: INPUT_CRC > < snak: SECTION_ES > 0 < /snak:SECTION_ES><snak:SECTION_SES>0</snak: SECTION_SES > < snak: SECTION_SEFS > 0 < /snak:SECTION_SEFS><snak:SECTION_LOS>0</snak: SECTION_LOS > < snak: SECTION_LOF > 0 < /snak:SECTION_LOF><snak:SECTION_BIP>0</snak: SECTION_BIP > < snak: LINE_ES > 0 < /snak:LINE_ES><snak:LINE_SES>0</snak: LINE_SES > < snak: LINE_RDI > 0 < /snak:LINE_RDI><snak:LINE_AIS>0</snak: LINE_AIS > < snak: LINE_BIP > 0 < /snak:LINE_BIP><snak:PATH_ES>0</snak: PATH_ES > < snak: PATH_SES > 0 < /snak:PATH_SES><snak:PATH_AIS>0</snak: PATH_AIS > < snak: PATH_BIP > 0 < /snak:PATH_BIP><snak:PATH_LOP>0</snak: PATH_LOP > < snak: PATH_UNEQ > 0 < /snak:PATH_UNEQ><snak:PATH_PLM>0</snak: PATH_PLM > < /snak:UpdatePostBertList>
+
+
+RESPONSE_MSG
+<snak:UPDATEPOSTBERTRESPONSE xmlns:snak="http://www.verizon.com/wfm/SnakeTest"><snak:STATUS_TYPE>SUCCESS</snak:STATUS_TYPE><snak:STATUS_MESSAGE>SUCCESS</snak:STATUS_MESSAGE></snak:UPDATEPOSTBERTRESPONSE>
