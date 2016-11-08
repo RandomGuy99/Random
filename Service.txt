@@ -397,9 +397,14 @@ public class SnakeTestValidator {
 	public ValidationResponse generateTestId(Data request) {
 		ValidationResponse response = new ValidationResponse();
 		StringBuilder message = new StringBuilder();
+		String testId= null;
 		boolean isValid = false;
+		boolean isInsert = false;
 
-		snakeTestDao.inserTestIdDetails(request);
+		testId=snakeTestDao.inserBertDetails(request);
+		if(StringUtils.isNotBlank(testId)){
+		//	isInsert = snakeTestDao.insertTestID(testId, list);
+		}
 
 		response.setStatus(isValid);
 		if (!isValid) {
