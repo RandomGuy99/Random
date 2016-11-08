@@ -153,7 +153,7 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 		return isActive;
 	}
 
-	public String inserTestIdDetails(Data request) {
+	public String inserBertDetails(Data request) {
 		logger.info("Inserting TestId Details into database....");
 		String workType= null;
 		String testId =null;
@@ -191,7 +191,7 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 		param.put("userId", userId);
 	    param.put("workType", workType);
 		try {
-			int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_TEST_DETAILS_SQL, param);
+			int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_BERT_DETAILS_SQL, param);
 			if (res > 0)
 				logger.info("TestId details inserted into Database");
 			try{
@@ -274,5 +274,28 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 			isUpdate = false;
 		}
 		return isUpdate;
+	}
+
+	
+	public boolean insertTestID(String testId, List berts) {
+		boolean isInsert = false;
+		String testID = testId;
+		logger.info("Inserting TestID in to Bundle and Bundle Status tables...");
+		try {
+			Map<String, String> param = new HashMap<String, String>();
+			param.put("testId", testID);
+			
+			int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_TEST_ID_SQL, param);
+			if (res > 0)
+				logger.info("RouterType inserted into Database");
+			isInsert = true;
+		} catch (Exception e) {
+			logger.error("Error while inserting the routerType into Database");
+			e.printStackTrace();
+			isInsert = false;
+		}
+
+		
+		return isInsert;
 	}
 }
