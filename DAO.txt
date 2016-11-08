@@ -79,40 +79,39 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 	public boolean isBertIdExist(String bertId) {
 		logger.info("Searching DB for if bertID exists....");
 		boolean isExist = false;
-			try {
-					String query = "SELECT * from BERT where BERT=" + "'" + bertId + "'";
-					SqlRowSet rows = dbWrapper.queryForRowSet(query);
-					while (rows.next()) {
-						logger.info("BERT exists in database...");
-						isExist = true;
-					}
-				} catch (Exception e) {
-					logger.error("Error while searching if the bert exists in Database");
-					e.printStackTrace();
-					isExist = false;
-				}
-			return isExist;
+		try {
+			String query = "SELECT * from BERT where BERT=" + "'" + bertId + "'";
+			SqlRowSet rows = dbWrapper.queryForRowSet(query);
+			while (rows.next()) {
+				logger.info("BERT exists in database...");
+				isExist = true;
+			}
+		} catch (Exception e) {
+			logger.error("Error while searching if the bert exists in Database");
+			e.printStackTrace();
+			isExist = false;
 		}
-		
+		return isExist;
+	}
 
 	public List insertBert(List<BERTS> bertList) {
 		logger.info("Inserting bert into database....");
 		List<String> list = new ArrayList<String>();
 		if (bertList.size() > 0) {
 			for (int i = 0; i < bertList.size(); i++) {
-				BERTS firstbert =  bertList.get(i);
+				BERTS firstbert = bertList.get(i);
 				int version = 1;
-				String bertId =  firstbert.getBERTID() + "_" + version;
+				String bertId = firstbert.getBERTID() + "_" + version;
 				try {
 					Map<String, String> param = new HashMap<String, String>();
 					param.put("bert", firstbert.getBERTID());
-					param.put("cid",  firstbert.getCID());
-					param.put("clo",  firstbert.getCLO());
+					param.put("cid", firstbert.getCID());
+					param.put("clo", firstbert.getCLO());
 					param.put("interfaceType", firstbert.getInterfaceType());
-					param.put("routerA",  firstbert.getRouterA());
+					param.put("routerA", firstbert.getRouterA());
 					param.put("physicalInterfaceA", firstbert.getPhysicalInterfaceA());
 					param.put("logicalInterfaceA", firstbert.getLogicalInterfaceA());
-					param.put("routerZ",firstbert.getRouterZ());
+					param.put("routerZ", firstbert.getRouterZ());
 					param.put("physicalInterfaceZ", firstbert.getPhysicalInterfaceZ());
 					param.put("logicalInterfaceZ", firstbert.getLogicalInterfaceZ());
 					param.put("version", Integer.toString(version));
@@ -120,18 +119,17 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 					int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_BERT_SQL, param);
 					if (res > 0)
 						logger.info("BERT inserted into Database");
-					
+
 					list.add(bertId);
-					
-				}
-				catch (Exception e) {
+
+				} catch (Exception e) {
 					logger.error("Error while inserting the bert into Database");
 					e.printStackTrace();
-					
+
 				}
 			}
-			}
-		
+		}
+
 		return list;
 	}
 
@@ -155,40 +153,65 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 		return isActive;
 	}
 
-	public boolean inserTestIdDetails(Data request) {
+	public String inserTestIdDetails(Data request) {
 		logger.info("Inserting TestId Details into database....");
-		boolean isInsert = false;
+		String workType= null;
+		String testId =null;
 		String userId = request.getNewSnaketest().getUserid();
-		String workType = request.getNewSnaketest().getWorktype();
-	
-		int status=0;
-		Map<Integer,String> map = new HashMap<Integer,String>();
-		Map<String,String> param = new HashMap<String,String>();
+		String workTypee = request.getNewSnaketest().getWorktype().trim();
+        if(workTypee.equalsIgnoreCase("Circuit Bundle")){
+        	workType= "0";	
+        }
+        else if(workTypee.equalsIgnoreCase("Circuit Upgrade")){
+        	workType= "1";
+        }
+        else if(workTypee.equalsIgnoreCase("Rearrangement")){
+        	workType= "2";
+        }
+        else if(workTypee.equalsIgnoreCase("Traffic Migration")){
+        	workType= "3";
+        }
+        else if(workTypee.equalsIgnoreCase("Pre-Production")){
+        	workType= "4";
+        }
+        else if(workTypee.equalsIgnoreCase("No Submision")){
+        	workType= "5";
+        }
+		int status = 0;
+		Map<String, String> param = new HashMap<String, String>();
+		/*Map<Integer, String> map = new HashMap<Integer, String>();
 		map.put(0, "Circuit Bundle");
 		map.put(1, "Circuit Upgrade");
 		map.put(2, "Rearrangement");
 		map.put(3, "Traffic Migration");
 		map.put(4, "Pre-Production");
-		map.put(5, "No Submision");
-			
+		map.put(5, "No Submision");*/
+
 		param.put("status", Integer.toString(status));
 		param.put("userId", userId);
-//		param.put("workType", value);
+	    param.put("workType", workType);
 		try {
-			String query = "INSERT INTO SNAKETEST (TESTID, STATUS, CREATED, WORKTYPE, USERID) "
-					+ "VALUES (:hostName, :routerType)";
-
-			 int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_TEST_DETAILS_SQL, param);
-			 if (res > 0)
-			logger.info("TestId details inserted into Database");
-			isInsert = true;
-		} catch (Exception e) {
+			int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_TEST_DETAILS_SQL, param);
+			if (res > 0)
+				logger.info("TestId details inserted into Database");
+			try{
+				String query= "SELECT MAX(TESTID) from SNAKETEST;";
+				SqlRowSet rows = dbWrapper.queryForRowSet(query);
+				while(rows.next()){
+				 testId = rows.getString("TESTID");	
+				}
+			}
+			catch(Exception e){
+				logger.error("Error while getting the TestId from Database");
+				e.printStackTrace();	
+			}
+			}
+		   catch (Exception e) {
 			logger.error("Error while inserting the TestId details into Database");
 			e.printStackTrace();
-			isInsert = false;
 		}
 
-		return false;
+		return testId;
 	}
 
 	public BERTS getBertDetails(String bertId) {
@@ -196,9 +219,10 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 		BERTS bertDetails = new BERTS();
 
 		try {
-			String query = "SELECT * from BERT WHERE BERT="+"'"+bertId+"'"+"AND BERT_VERSION IN (SELECT MAX(BERT_VERSION) FROM BERT)";
-     		  SqlRowSet rows = dbWrapper.queryForRowSet(query);
-     		 while (rows.next()) {
+			String query = "SELECT * from BERT WHERE BERT=" + "'" + bertId + "'"
+					+ "AND BERT_VERSION IN (SELECT MAX(BERT_VERSION) FROM BERT)";
+			SqlRowSet rows = dbWrapper.queryForRowSet(query);
+			while (rows.next()) {
 				bertDetails.setBERTID(rows.getString("BERT"));
 				bertDetails.setCID(rows.getString("CID"));
 				bertDetails.setCLO(rows.getString("CLO"));
@@ -211,16 +235,13 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 				bertDetails.setLogicalInterfaceZ(rows.getString("LOGICAL_INTERFACE_Z"));
 				bertDetails.setVersion(rows.getString("BERT_VERSION"));
 				bertDetails.setBertid_version(rows.getString("BERT_ID"));
-		}
-		}	 
-		catch (Exception e) {
+			}
+		} catch (Exception e) {
 			logger.error("Error while getting the Bert Details from Database");
 			e.printStackTrace();
 		}
-		return (BERTS) bertDetails; 
-		}
-		
-	
+		return (BERTS) bertDetails;
+	}
 
 	public boolean updateBertDetails(BERTS bert) {
 		boolean isUpdate = false;
@@ -247,8 +268,7 @@ public class SnakeTestDaoImpl implements SnakeTestDao {
 				logger.info("BERT details updated...");
 				isUpdate = true;
 			}
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			logger.error("Error while getting the Bert Details from Database");
 			e.printStackTrace();
 			isUpdate = false;
