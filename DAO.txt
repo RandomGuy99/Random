@@ -1,0 +1,258 @@
+package com.verizon.delphi.msvcs.dao.impl;
+
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
+
+import com.verizon.delphi.config.DbWrapper;
+import com.verizon.delphi.msvcs.dao.SnakeTestDao;
+import com.verizon.delphi.msvcs.request.model.BERTS;
+import com.verizon.delphi.msvcs.request.model.Data;
+import com.verizon.delphi.msvcs.util.SnakeTestServiceConstants;
+
+@Component("SnakeTestDao")
+public class SnakeTestDaoImpl implements SnakeTestDao {
+
+	@Autowired
+	DbWrapper dbWrapper;
+
+	private static final Logger logger = LoggerFactory.getLogger(SnakeTestDaoImpl.class);
+
+	public boolean isRouterTypeExist(String routerType) {
+		logger.info("Searching DB for routerType....");
+		boolean isExist = false;
+		try {
+			String query = "SELECT * from ROUTERS where HOSTNAME=" + "'" + routerType.trim() + "'";
+			SqlRowSet rows = dbWrapper.queryForRowSet(query);
+			while (rows.next()) {
+				logger.info("RouterType from the Database is " + rows.getString("ROUTERTYPE") + " for hostname "
+						+ routerType);
+				isExist = true;
+			}
+		} catch (Exception e) {
+			logger.error("Error while getting the routerType from Database");
+			e.printStackTrace();
+			isExist = false;
+		}
+		return isExist;
+	}
+
+	public boolean insertRouterType(@SuppressWarnings("rawtypes") Map model) {
+		logger.info("Inserting routerType into database....");
+		boolean isInsert = false;
+		@SuppressWarnings("rawtypes")
+		Iterator it = model.entrySet().iterator();
+		while (it.hasNext()) {
+			@SuppressWarnings("rawtypes")
+			Map.Entry pair = (Map.Entry) it.next();
+			it.remove();
+			try {
+				Map<String, String> param = new HashMap<String, String>();
+				param.put("hostName", pair.getKey().toString());
+				param.put("routerType", pair.getValue().toString());
+				int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_ROUTERTYPE_SQL, param);
+				if (res > 0)
+					logger.info("RouterType inserted into Database");
+				isInsert = true;
+			} catch (Exception e) {
+				logger.error("Error while inserting the routerType into Database");
+				e.printStackTrace();
+				isInsert = false;
+			}
+
+		}
+		return isInsert;
+	}
+
+	public boolean isBertIdExist(String bertId) {
+		logger.info("Searching DB for if bertID exists....");
+		boolean isExist = false;
+			try {
+					String query = "SELECT * from BERT where BERT=" + "'" + bertId + "'";
+					SqlRowSet rows = dbWrapper.queryForRowSet(query);
+					while (rows.next()) {
+						logger.info("BERT exists in database...");
+						isExist = true;
+					}
+				} catch (Exception e) {
+					logger.error("Error while searching if the bert exists in Database");
+					e.printStackTrace();
+					isExist = false;
+				}
+			return isExist;
+		}
+		
+
+	public List insertBert(List<BERTS> bertList) {
+		logger.info("Inserting bert into database....");
+		List<String> list = new ArrayList<String>();
+		if (bertList.size() > 0) {
+			for (int i = 0; i < bertList.size(); i++) {
+				BERTS firstbert =  bertList.get(i);
+				int version = 1;
+				String bertId =  firstbert.getBERTID() + "_" + version;
+				try {
+					Map<String, String> param = new HashMap<String, String>();
+					param.put("bert", firstbert.getBERTID());
+					param.put("cid",  firstbert.getCID());
+					param.put("clo",  firstbert.getCLO());
+					param.put("interfaceType", firstbert.getInterfaceType());
+					param.put("routerA",  firstbert.getRouterA());
+					param.put("physicalInterfaceA", firstbert.getPhysicalInterfaceA());
+					param.put("logicalInterfaceA", firstbert.getLogicalInterfaceA());
+					param.put("routerZ",firstbert.getRouterZ());
+					param.put("physicalInterfaceZ", firstbert.getPhysicalInterfaceZ());
+					param.put("logicalInterfaceZ", firstbert.getLogicalInterfaceZ());
+					param.put("version", Integer.toString(version));
+					param.put("bertId", bertId);
+					int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_BERT_SQL, param);
+					if (res > 0)
+						logger.info("BERT inserted into Database");
+					
+					list.add(bertId);
+					
+				}
+				catch (Exception e) {
+					logger.error("Error while inserting the bert into Database");
+					e.printStackTrace();
+					
+				}
+			}
+			}
+		
+		return list;
+	}
+
+	public boolean isBertActive(String berdId) {
+		logger.info("Searching if bert is active in database....");
+		boolean isActive = false;
+		try {
+			String query = "SELECT * from BUNDLE_STATUS where BERT_ID=" + "'" + berdId.trim() + "'";
+			SqlRowSet rows = dbWrapper.queryForRowSet(query);
+			while (rows.next()) {
+				int status = Integer.parseInt(rows.getString("STATUS"));
+				if (status == 3) {
+					isActive = true;
+				}
+			}
+		} catch (Exception e) {
+			logger.error("Error while getting the routerType from Database");
+			e.printStackTrace();
+			isActive = false;
+		}
+		return isActive;
+	}
+
+	public boolean inserTestIdDetails(Data request) {
+		logger.info("Inserting TestId Details into database....");
+		boolean isInsert = false;
+		String userId = request.getNewSnaketest().getUserid();
+		String workType = request.getNewSnaketest().getWorktype();
+	
+		int status=0;
+		Map<Integer,String> map = new HashMap<Integer,String>();
+		Map<String,String> param = new HashMap<String,String>();
+		map.put(0, "Circuit Bundle");
+		map.put(1, "Circuit Upgrade");
+		map.put(2, "Rearrangement");
+		map.put(3, "Traffic Migration");
+		map.put(4, "Pre-Production");
+		map.put(5, "No Submision");
+			
+		param.put("status", Integer.toString(status));
+		param.put("userId", userId);
+//		param.put("workType", value);
+		try {
+			String query = "INSERT INTO SNAKETEST (TESTID, STATUS, CREATED, WORKTYPE, USERID) "
+					+ "VALUES (:hostName, :routerType)";
+
+			 int res = dbWrapper.update(SnakeTestServiceConstants.INSERT_TEST_DETAILS_SQL, param);
+			 if (res > 0)
+			logger.info("TestId details inserted into Database");
+			isInsert = true;
+		} catch (Exception e) {
+			logger.error("Error while inserting the TestId details into Database");
+			e.printStackTrace();
+			isInsert = false;
+		}
+
+		return false;
+	}
+
+	public BERTS getBertDetails(String bertId) {
+		logger.info("Searching DB for BERT details....");
+		BERTS bertDetails = new BERTS();
+
+		try {
+			String query = "SELECT * from BERT WHERE BERT="+"'"+bertId+"'"+"AND BERT_VERSION IN (SELECT MAX(BERT_VERSION) FROM BERT)";
+     		  SqlRowSet rows = dbWrapper.queryForRowSet(query);
+     		 while (rows.next()) {
+				bertDetails.setBERTID(rows.getString("BERT"));
+				bertDetails.setCID(rows.getString("CID"));
+				bertDetails.setCLO(rows.getString("CLO"));
+				bertDetails.setInterfaceType(rows.getString("INTERFACE_TYPE"));
+				bertDetails.setRouterA(rows.getString("ROUTER_A"));
+				bertDetails.setPhysicalInterfaceA(rows.getString("PHYSICAL_INTERFACE_A"));
+				bertDetails.setLogicalInterfaceA(rows.getString("LOGICAL_INTERFACE_A"));
+				bertDetails.setRouterZ(rows.getString("ROUTER_Z"));
+				bertDetails.setPhysicalInterfaceZ(rows.getString("PHYSICAL_INTERFACE_Z"));
+				bertDetails.setLogicalInterfaceZ(rows.getString("LOGICAL_INTERFACE_Z"));
+				bertDetails.setVersion(rows.getString("BERT_VERSION"));
+				bertDetails.setBertid_version(rows.getString("BERT_ID"));
+		}
+		}	 
+		catch (Exception e) {
+			logger.error("Error while getting the Bert Details from Database");
+			e.printStackTrace();
+		}
+		return (BERTS) bertDetails; 
+		}
+		
+	
+
+	public boolean updateBertDetails(BERTS bert) {
+		boolean isUpdate = false;
+		logger.info("Updating  BERT details....");
+		int version = Integer.parseInt(bert.getVersion()) + 1;
+		String bertId = bert.getBERTID() + "_" + version;
+		Map<String, String> param = new HashMap<String, String>();
+		param.put("bert", bert.getBERTID());
+		param.put("cid", bert.getCID());
+		param.put("clo", bert.getCLO());
+		param.put("interfaceType", bert.getInterfaceType());
+		param.put("routerA", bert.getRouterA());
+		param.put("physicalInterfaceA", bert.getPhysicalInterfaceA());
+		param.put("logicalInterfaceA", bert.getLogicalInterfaceA());
+		param.put("routerZ", bert.getRouterZ());
+		param.put("physicalInterfaceZ", bert.getPhysicalInterfaceZ());
+		param.put("logicalInterfaceZ", bert.getLogicalInterfaceZ());
+		param.put("version", Integer.toString(version));
+		param.put("bertId", bertId);
+
+		try {
+			int res = dbWrapper.update(SnakeTestServiceConstants.UPDATE_BERT_SQL, param);
+			if (res > 0) {
+				logger.info("BERT details updated...");
+				isUpdate = true;
+			}
+		}
+		catch (Exception e) {
+			logger.error("Error while getting the Bert Details from Database");
+			e.printStackTrace();
+			isUpdate = false;
+		}
+		return isUpdate;
+	}
+}
