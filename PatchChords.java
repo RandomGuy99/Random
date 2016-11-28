@@ -41,10 +41,10 @@ public class PatchChords {
 				fNode = getNextSibling(fNode.getNextSibling());
 				String Port = fNode.getTextContent();
 				if((Integer.parseInt(Port))%2==0){
-			    toPort = (Integer.parseInt(Port))%2;	
+			    toPort = Integer.parseInt(Port);	
 				}
 				else{
-				toPort= (Integer.parseInt(Port))%2+1;
+				toPort= Integer.parseInt(Port)+1;
 				}
 				StringBuilder aidSb = new StringBuilder();
 				StringBuilder fromSb = new StringBuilder();
@@ -70,10 +70,10 @@ public class PatchChords {
 				fNode = getNextSibling(fNode.getNextSibling());
 				String fPort = fNode.getTextContent(); 
 				if((Integer.parseInt(fPort))%2==0){
-				 fromPort = Integer.parseInt(fPort)%2;	
+				 fromPort = Integer.parseInt(fPort);	
 				}
 				else{
-					fromPort = Integer.parseInt(fPort)%2+1;	
+					fromPort = Integer.parseInt(fPort)+1;	
 				}
 					
 				fNode = getNextSibling(fNode.getNextSibling());
