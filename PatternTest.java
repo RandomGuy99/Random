@@ -63,35 +63,40 @@ System.out.println("net details");
 						net.getShelfList().add(shelf);
 						}else{
 							int shelflength = net.getShelfList().size();
+							boolean isShelf = true;
 							for(int i=0;i<shelflength;i++){
 								Shelf sh= net.getShelfList().get(i);
 								String hid = sh.getId();
-								if(hid.equals(a[1]) && sh.getSlotList().size()>0){
+								if(hid.equals(a[1])){
 								int slotlength = sh.getSlotList().size();
+								boolean isSlot = true;
 								for(int j=0;j<slotlength;j++){	
 								Slot sl= sh.getSlotList().get(j);
 								String sid = sl.getId();
-								if(sid.equals(a[2]) && sl.getCardList().size() >0 ){
+								if(sid.equals(a[2]) ){
 								int cardlength = sl.getCardList().size();
+								boolean isCard = true;
 								for(int k=0;k<cardlength;k++){
 								Card ca= sl.getCardList().get(k);
 									String cid = ca.getId();
 									if(cid.equals(a[1]+"-"+a[2])){
 										ca.getPortList().add(port);
-									}else{
+										isCard = false;
+										isSlot=false;
+										isShelf=false;
+									}}						
+								    if(isCard){
+									    isSlot=false;
+									    isShelf=false;
 										sl.getCardList().add(card);
-									}
-								}
-								}else{
+									}}}
+								if(isSlot){
+									isShelf=false;
 									sh.getSlotList().add(slot);
-								}
-								}
-								}else{
-								
+								}}}
+    						   if(isShelf){
 								net.getShelfList().add(shelf);
-								
 								}
-							}
 						}
 					}
                     if("MODULE".equals(form[0])){
@@ -100,39 +105,46 @@ System.out.println("net details");
 						card.getModuleList().add(module);
 						slot.getCardList().add(card);
 						shelf.getSlotList().add(slot);
+						
 						if(net.getShelfList().size()==0){
 						net.getShelfList().add(shelf);
 						}else{
 							int shelflength = net.getShelfList().size();
+							boolean isShelf = true;
 							for(int i=0;i<shelflength;i++){
 								Shelf sh= net.getShelfList().get(i);
 								String hid = sh.getId();
-								if(hid.equals(a[1]) && sh.getSlotList().size()>0){
+								if(hid.equals(a[1])){
 									int slotlength = sh.getSlotList().size();
+									boolean isSlot = true;
 									for(int j=0;j<slotlength;j++){	
 									Slot sl= sh.getSlotList().get(j);
 								String sid = sl.getId();
-								if(sid.equals(a[2]) && sl.getCardList().size() >0 ){
+								if(sid.equals(a[2]) ){
 									int cardlength = sl.getCardList().size();
+									boolean isCard = true;
 									for(int k=0;k<cardlength;k++){
 									Card ca= sl.getCardList().get(k);
 									String cid = ca.getId();
 									if(cid.equals(a[1]+"-"+a[2])){
 										ca.getModuleList().add(module);
-									}else{
+										isCard = false;
+										isSlot=false;
+										isShelf=false;
+									}}						
+									if(isCard){
+										isSlot=false;
+										isShelf=false;
 										sl.getCardList().add(card);
-									}
-								}
-								}else{
+									}}}
+								if(isSlot){
+									isShelf=false;
 									sh.getSlotList().add(slot);
-								}
-								}
-								}else{
-								
+								}}}
+        						if(isShelf){
 								net.getShelfList().add(shelf);
-								
 								}
-							}
+							
 						}
 					}
 			}
@@ -149,28 +161,36 @@ System.out.println("net details");
 				net.getShelfList().add(shelf);
 				}else{
 					int shelflength = net.getShelfList().size();
+					boolean isShelf = true;
 					for(int i=0;i<shelflength;i++){
 						Shelf sh= net.getShelfList().get(i);
 						String hid = sh.getId();
-						if(hid.equals(a[1]) && sh.getSlotList().size()>0){
+						if(hid.equals(a[1])){
 							int slotlength = sh.getSlotList().size();
+							boolean isSlot = true;
 							for(int j=0;j<slotlength;j++){	
 							Slot sl= sh.getSlotList().get(j);
 						String sid = sl.getId();
-						if(sid.equals(a[2]) && sl.getCardList().size() >0 ){
-						sl.getCardList().add(card);
-						}else{
+						if(sid.equals(a[2])){
+							if(!(hid+"-"+sid).equals(card.getId())){
+						   sl.getCardList().add(card);
+							}
+						   isSlot=false;
+						   isShelf = false;
+						}}
+						if(isSlot){
+								isShelf=false;
 							sh.getSlotList().add(slot);
 						}
 						}
-						}else{
+						}
+					   if(isShelf){
 						net.getShelfList().add(shelf);
 						}
-					}
 				}
 			}
  
-            if(null!=form&&form.length==2){
+            if(null!=form&&form.length==3&&"SLOT".equals(form[0])){
             	Shelf shelf = new Shelf();
 				shelf.setId(a[1]);
 				Slot slot = new Slot();
@@ -180,15 +200,19 @@ System.out.println("net details");
 				net.getShelfList().add(shelf);
 				}else{
 					int shelflength = net.getShelfList().size();
+					boolean isShelf = true;
 					for(int i=0;i<shelflength;i++){
 						Shelf sh= net.getShelfList().get(i);
 						String hid = sh.getId();
-						if(hid.equals(a[1]) && sh.getSlotList().size()>0){
+						if(hid.equals(a[1])){
+							if(!(a[2]).equals(slot.getId())){	
 						sh.getSlotList().add(slot);
-						}else{
+							}
+						isShelf = false;
+						}}
+					    if(isShelf){
 						net.getShelfList().add(shelf);
 						}
-					}
 				}
 	       }
 			
