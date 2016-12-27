@@ -191,12 +191,12 @@
 			   </KeyWord>
 			 </AID>
 		   </Command>
-          <Command Name="RTRV-INV" Description="Inventory">
-			<AID Name="SLOT-2-1" format="SLOT-{SHELF}-{SLOT}">
+         <Command Name="RTRV-INV" Description="Inventory">
+			<AID Name="SLOT-2-1" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="TNCS-O" PN="" HWREV="" FWREV="">
 			 </KeyWord>
 			</AID>
-			<AID Name="SLOT-2-17" format="SLOT-{SHELF}-{SLOT}">
+			<AID Name="SLOT-2-17" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="TNCS-O" PN="" HWREV="" FWREV="">
 			 </KeyWord>
 			</AID>
@@ -228,27 +228,27 @@
 			 <KeyWord AIDTYPE="MF-M16LC-CV" PN="74-39041-01" HWREV="A0" FWREV="0196">
 			 </KeyWord>
 			</AID>
-			<AID Name="SLOT-1-1" format="SLOT-{SHELF}-{SLOT}">
+			<AID Name="SLOT-1-1" format="CARD-{SHELF}-{SLOT}">
 			<KeyWord AidType="TNCS-O" PN="800-45427-01" HWREV="A0" FWREV="57-101034-02" >
 			</KeyWord>
 			</AID>
-			<AID Name="SLOT-1-6" format="SLOT-{SHELF}-{SLOT}">
+			<AID Name="SLOT-1-6" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="16-AD-CCOFS" PN="74-12847-02" HWREV="A0" FWREV="57-100945-04">
 			 </KeyWord>
 			</AID>
-			<AID Name="SLOT-1-8" format="SLOT-{SHELF}-{SLOT}">
+			<AID Name="SLOT-1-8" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="20-SMRFS-CV" PN="74-104089-01" HWREV="A0" FWREV="57-100994-02">
 			 </KeyWord>
 			</AID>
-			<AID Name="SLOT-1-10" format="SLOT-{SHELF}-{SLOT}">
+			<AID Name="SLOT-1-10" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="20-SMRFS-CV" PN="74-104089-01" HWREV="A0" FWREV="57-100994-02">
 			 </KeyWord>
 			</AID>
-			<AID Name="SLOT-1-12" format="SLOT-{SHELF}-{SLOT}">
+			<AID Name="SLOT-1-12" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="16-AD-CCOFS" PN="74-12847-02" HWREV="A0" FWREV="57-100945-04">
 			 </KeyWord>
 			</AID>
-			<AID Name="SLOT-1-17" format="SLOT-{SHELF}-{SLOT}">
+			<AID Name="SLOT-1-17" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="TNCS-O" PN="800-45427-01" HWREV="A0" FWREV="57-101034-02">
 			 </KeyWord>
 			</AID>	
@@ -276,43 +276,43 @@
 			 <KeyWord AIDTYPE="NCS2015-FTA" PN="800-44612-01" HWREV="A0">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-1-1" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-1-1" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-1-2" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-1-2" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-1-3" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-1-3" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-1-4" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-1-4" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-2-1" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-2-1" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-2-2" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-2-2" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-2-3" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-2-3" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="PWRM-2-4" format="MODULE-{SHELF}-{SLOT}">
+			<AID Name="PWRM-2-4" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS 4000 DC Power">
 			 </KeyWord>
 			</AID>	
-			<AID Name="ECU-1-18" format="ECU-{SHELF}-{SLOT}">
+			<AID Name="ECU-1-18" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS2015-ECU" PN="800-44611-01" HWREV="A0" FWREV="">
 			 </KeyWord>
 			</AID>	
-			<AID Name="ECU-2-18" format="ECU-{SHELF}-{SLOT}">
+			<AID Name="ECU-2-18" format="CARD-{SHELF}-{SLOT}">
 			 <KeyWord AIDTYPE="NCS2015-ECU" PN="" HWREV="A0" FWREV="">
 			 </KeyWord>
 			</AID>
