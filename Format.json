@@ -5,61 +5,1096 @@
         {
           "children": [
             {
+              "fan": null,
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-51|14",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-51|14",
+                  "label": "Slot(14)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-51|1",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-51|1",
+                  "label": "Slot(1)",
+                  "class": "SLOT"
+                }
+              ],
+              "id": "EV-51",
+              "label": "Shelf(51)",
+              "class": "SHELF"
+            },
+            {
+              "fan": {
+                "id": "EV-2",
+                "label": "Fan()",
+                "_class": "FAN"
+              },
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-2|1",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-2|1",
+                  "label": "Slot(1)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-2|4",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-2|4",
+                  "label": "Slot(4)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-2|3",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-2|3",
+                  "label": "Slot(3)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-2|2",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-2|2",
+                  "label": "Slot(2)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-2|18",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-2|18",
+                  "label": "Slot(18)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-2|17",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-2|17",
+                  "label": "Slot(17)",
+                  "class": "SLOT"
+                }
+              ],
+              "id": "EV-2",
+              "label": "Shelf(2)",
+              "class": "SHELF"
+            },
+            {
+              "fan": {
+                "id": "EV-1",
+                "label": "Fan()",
+                "_class": "FAN"
+              },
               "children": [
                 {
                   "children": [
                     {
                       "children": [
                         {
-                          "id": "EV-123|1|4|9", ==>"EV-ShelfId | Slot Id |Card ID| PortID "
-                          "label": "Port(9)", ==>"Port(PortID)"
-                          "class": "PORT"
-                        }
-                      ],
-                      "id": "EV-123|1|4", ==>"ShelfId | SlotID | CARDID"
-                      "label": "Card(4)", ==>"Card(CardID)"
-                      "class": "CARD"
-                    },
-                    {
-                      "children": [
-                        {
-                          "id": "EV-123|1|3|6", ==>"EV-ShelfID | SlotID |Card ID | ModuleId"
-                          "label": "Module(6)", ==> "Module(ModuleId)"
+                          "id": "EV-1|17|1-17|1",
+                          "label": "Module(1)",
                           "class": "MODULE"
                         }
                       ],
-                      "id": "EV-123|1|3", ==>"ShelfId | SlotID|CARDID"
-                      "label": "Card(3)", ==>"Card(CARDID)"
+                      "id": "EV-1|17",
+                      "label": "Card()",
                       "class": "CARD"
                     }
                   ],
-                  "id": "EV-123|1", ==>"EV-ShelfId | Slot ID"
-                  "label": "SLOT-1", ==> "SLOT-SlotID"
+                  "id": "EV-1|17",
+                  "label": "Slot(17)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-1|2",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|2",
+                  "label": "Slot(2)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-1|12",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|12",
+                  "label": "Slot(12)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "EV-1|1|1-1|1",
+                          "label": "Module(1)",
+                          "class": "MODULE"
+                        }
+                      ],
+                      "id": "EV-1|1",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|1",
+                  "label": "Slot(1)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-1|8",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|8",
+                  "label": "Slot(8)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-1|6",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|6",
+                  "label": "Slot(6)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-1|4",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|4",
+                  "label": "Slot(4)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "id": "EV-1|18|1-18|13",
+                          "label": "Port(13)",
+                          "class": "PORT"
+                        },
+                        {
+                          "id": "EV-1|18|1-18|14",
+                          "label": "Port(14)",
+                          "class": "PORT"
+                        }
+                      ],
+                      "id": "EV-1|18",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|18",
+                  "label": "Slot(18)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-1|10",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|10",
+                  "label": "Slot(10)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-1|3",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-1|3",
+                  "label": "Slot(3)",
                   "class": "SLOT"
                 }
               ],
-              "id": "EV-123",   ==> "EV-ShelfID"
-              "label": "Shelf-123", ==> "Shelf-ShelfID"
+              "id": "EV-1",
+              "label": "Shelf(1)",
+              "class": "SHELF"
+            },
+            {
+              "fan": null,
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-81|4",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-81|4",
+                  "label": "Slot(4)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-81|5",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-81|5",
+                  "label": "Slot(5)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-81|6",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-81|6",
+                  "label": "Slot(6)",
+                  "class": "SLOT"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [],
+                      "id": "EV-81|7",
+                      "label": "Card()",
+                      "class": "CARD"
+                    }
+                  ],
+                  "id": "EV-81|7",
+                  "label": "Slot(7)",
+                  "class": "SLOT"
+                }
+              ],
+              "id": "EV-81",
+              "label": "Shelf(81)",
               "class": "SHELF"
             }
           ],
-          "id": "SF0c00d645-c432-4044-9caf-52d88d9018b5-SF1d1538b3-fa8e-458e-b711-5bf819e455fa",
-          "label": "BFLONYFR-0771904A (MUX)",
-          "class": "SFNode"
-        }
-      ],
-      "id": "SF0c00d645-c432-4044-9caf-52d88d9018b5",
-      "label": "BFLONYFR-0771904A"
-    },
-       "signal-flow-diagram": {
-      "children": [
-        {
-          "id": "SFd1eab7e2-dd5d-4083-aebb-3933e42a983d-SF38089bf0-e07b-472a-af63-c18a0f0ad3a8",
+          "id": "SF94c6a858-d925-4a88-b7d8-e7a5bdf292f9-SFa1a27d48-44aa-4ca5-8837-1a90126f5710",
           "label": "HRSHPAXH-0110016A (MUX)",
           "class": "SFNode"
         }
       ],
-      "id": "SFd1eab7e2-dd5d-4083-aebb-3933e42a983d",
+      "id": "SF94c6a858-d925-4a88-b7d8-e7a5bdf292f9",
+      "label": "HRSHPAXH-0110016A"
+    },
+    "attributes": {
+      "SF94c6a858-d925-4a88-b7d8-e7a5bdf292f9-SFe1821cd3-bf3c-4cf8-9e4b-952cc601e0b0": {
+        "role": "MUX",
+        "ownership": "VZT",
+        "aidlist": [
+          {
+            "aid": "PSLINE-81-1-3-TX|LINE-1-6-26-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-22-TX|PSLINE-81-6-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-1-TX|LINE-1-6-21-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-22-TX|PSLINE-51-14-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-20-TX|PSLINE-51-14-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-4-TX|LINE-1-8-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-6-TX|LINE-1-10-21-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-28-TX|PSLINE-81-1-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-1-TX|LINE-1-12-30-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-3-TX|LINE-1-12-34-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-4-TX|LINE-1-12-35-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-8-TX|LINE-1-10-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-1-2",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-27-TX|PSLINE-81-1-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PUNIT-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-2-TX|PSLINE-51-14-18-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-1-4",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-1-3",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-23-TX|LINE-1-12-3-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-1-TX|LINE-1-6-30-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "TCPUSER01",
+            "rateCode": ""
+          },
+          {
+            "aid": "FAC-1-17-1-1|LINE-1-10-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-34-TX|PSLINE-81-2-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-3-TX|LINE-1-12-26-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "DELPHI008",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-1-TX|LINE-1-6-29-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-5-TX|LINE-1-10-20-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-21-TX|PSLINE-81-6-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-31-TX|PSLINE-81-2-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-35-TX|PSLINE-81-7-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-30-TX|PSLINE-81-7-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-2-TX|LINE-1-6-23-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-1-TX|LINE-1-12-22-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-2-TX|FAC-1-17-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-6-TX|PSLINE-51-1-3-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-33-TX|PSLINE-81-2-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "FAC-1-1-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "CISCO15",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-7-TX|PSLINE-51-1-4-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-1-5-TX|PSLINE-17-1-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-29-TX|PSLINE-81-7-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "SYNC-1-NE",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-35-TX|PSLINE-81-2-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "FAN-2-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-36-TX|PSLINE-81-7-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUNIT-81-6",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUNIT-81-7",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-4-TX|PSLINE-51-1-1-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-3-TX|LINE-1-6-33-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-2-TX|PSLINE-51-14-22-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUNIT-81-2",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-1-17",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-8-TX|LINE-1-10-23-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-32-TX|PSLINE-81-2-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-2-TX|LINE-1-6-32-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUNIT-81-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "TTSTIER1",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-2-TX|LINE-1-8-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-2-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-1-12",
+            "rateCode": ""
+          },
+          {
+            "aid": "PPM-1-17-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-2-TX|LINE-1-6-24-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-2-4",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-2-3",
+            "rateCode": ""
+          },
+          {
+            "aid": "ECU-1-18",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-1-10",
+            "rateCode": ""
+          },
+          {
+            "aid": "PWRM-2-2",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-4-TX|LINE-1-8-23-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-26-TX|PSLINE-81-1-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-2-TX|LINE-1-12-23-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-3-TX|LINE-1-12-25-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "SHELF-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "SHELF-2",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-3-TX|LINE-1-8-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-23-TX|PSLINE-51-14-4-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-25-TX|PSLINE-81-1-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-4-TX|LINE-1-12-28-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-3-TX|PSLINE-51-14-19-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-1-TX|LINE-1-6-22-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-5-TX|PSLINE-51-1-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-22-TX|PSLINE-81-1-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUNIT-51-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-36-TX|PSLINE-81-2-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-26-TX|PSLINE-81-6-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "BP-2",
+            "rateCode": ""
+          },
+          {
+            "aid": "BP-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-3-TX|LINE-1-6-25-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-2-TX|LINE-1-12-31-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-4-TX|LINE-1-12-36-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-21-TX|PSLINE-51-14-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-1-1-TX|PSLINE-8-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-25-TX|PSLINE-81-6-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-6-TX|LINE-1-10-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-1-TX|PSLINE-51-14-21-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-10-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-29-TX|PSLINE-81-2-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-7-TX|PSLINE-51-1-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-4-TX|LINE-1-6-35-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUSB-51-14",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-21-TX|PSLINE-51-14-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-7-TX|LINE-1-10-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-24-TX|LINE-1-12-4-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-21-TX|PSLINE-81-1-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "SYNC-1-BITS1",
+            "rateCode": ""
+          },
+          {
+            "aid": "FAN-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-2-TX|FAC-1-1-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "SYNC-1-BITS2",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-1-TX|PSLINE-51-14-17-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-31-TX|PSLINE-81-7-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-2-TX|LINE-1-12-32-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-5-TX|PSLINE-51-1-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-23-TX|PSLINE-51-14-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-4-TX|PSLINE-51-14-20-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-1-8",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-1-6",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-20-TX|LINE-1-6-4-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-34-TX|PSLINE-81-7-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-4-TX|LINE-1-6-27-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-28-TX|PSLINE-81-6-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-4-TX|LINE-1-6-36-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-3-TX|LINE-1-6-34-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-32-TX|PSLINE-81-7-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-9-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-30-TX|PSLINE-81-2-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "ECU-2-18",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-22-TX|LINE-1-12-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-5-TX|LINE-1-10-4-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-3-TX|LINE-1-12-33-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-2-2-TX|LINE-1-6-31-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUSB-51-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-1-TX|LINE-1-8-20-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSHELF-51",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-33-TX|PSLINE-81-7-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-1-1-TX|LINE-1-8-4-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-4-TX|LINE-1-12-27-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-23-TX|PSLINE-81-6-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-1-TX|LINE-1-12-21-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-23-TX|PSLINE-81-1-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-1-4-TX|PSLINE-1-1-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-17-TX|LINE-1-6-1-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-2-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "USBPORT-1-18-13",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUNIT-51-14",
+            "rateCode": ""
+          },
+          {
+            "aid": "USBPORT-1-18-14",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-3-TX|LINE-1-8-22-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSHELF-81",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-3-TX|PSLINE-51-14-23-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "TIER2OPT",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-7-TX|LINE-1-10-22-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-4-TX|PSLINE-51-1-5-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-27-TX|PSLINE-81-6-8-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-2-TX|LINE-1-8-21-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-7-1-TX|LINE-1-12-29-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-18-TX|LINE-1-6-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-6-24-TX|PSLINE-81-1-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-22-TX|PSLINE-51-14-3-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PPM-1-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUSB-81-4",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-4-TX|PSLINE-51-14-24-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUSB-81-5",
+            "rateCode": ""
+          },
+          {
+            "aid": "SLOT-2-17",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUSB-81-6",
+            "rateCode": ""
+          },
+          {
+            "aid": "FAC-1-1-1-1|LINE-1-8-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSUSB-81-7",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-19-TX|LINE-1-6-3-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-10-6-TX|PSLINE-51-1-7-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-1-4-TX|LINE-1-6-28-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-1-9-TX|PSLINE-10-2-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-8-20-TX|PSLINE-51-14-1-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-81-6-2-TX|LINE-1-12-24-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "BITS-1-1",
+            "rateCode": ""
+          },
+          {
+            "aid": "LINE-1-12-24-TX|PSLINE-81-6-6-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "BITS-1-2",
+            "rateCode": ""
+          },
+          {
+            "aid": "PSLINE-51-14-21-TX|LINE-1-12-1-RX",
+            "rateCode": ""
+          },
+          {
+            "aid": "FAC-1-17-1-1",
+            "rateCode": ""
+          }
+        ],
+        "degree": "2D",
+        "model": "CiscoNCS2000",
+        "conditions": [],
+        "tid": "HRSHPAXH-0110016A",
+        "availableCmds": [
+          "NEAT_TEST",
+          "DIRECT_TL1"
+        ]
+      }
+    },
+    "signal-flow-diagram": {
+      "children": [
+        {
+          "id": "SF94c6a858-d925-4a88-b7d8-e7a5bdf292f9-SFe1821cd3-bf3c-4cf8-9e4b-952cc601e0b0",
+          "label": "HRSHPAXH-0110016A (MUX)",
+          "class": "SFNode"
+        }
+      ],
+      "id": "",
       "label": "HRSHPAXH-0110016A"
     }
   }
